@@ -15,7 +15,7 @@ import android.view.View;
  */
 
 public class MyView extends View {
-    public static final float RADIUS = 70f;
+    public static final float RADIUS = 30f;
     private Point currentPoint;
     private Paint mPaint;// 绘图画笔
 
@@ -25,6 +25,7 @@ public class MyView extends View {
         // 初始化画笔
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(Color.BLUE);
+
     }
 
     // 复写onDraw()从而实现绘制逻辑
@@ -38,8 +39,8 @@ public class MyView extends View {
         // 如果currentPoint对象是空，那么就调用startAnimation()方法来启动动画。
         if (currentPoint == null) {
             currentPoint = new Point(RADIUS, RADIUS);
-            // 创建一个点对象(坐标是(70,70))
-            // 在该点画一个圆:圆心 = (70,70),半径 = 70
+            // 创建一个点对象
+            // 在该点画一个圆
             float x = currentPoint.getX();
             float y = currentPoint.getY();
             canvas.drawCircle(x, y, RADIUS, mPaint);

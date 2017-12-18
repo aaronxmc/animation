@@ -13,7 +13,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="试试自由改运动轨迹"/>
+        android:text="试试改运动轨迹"/>
 
     <Button
         android:id="@+id/btn2"

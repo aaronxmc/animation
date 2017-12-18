@@ -32,10 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        mMyView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CurveActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         /**
-         * 步骤：
+         * 步骤：j
          * 1.设置动画初始值，结束值
          * 2.设置播放的各种属性
          * 3.通过动画的更新监视器，手动将改变的值赋值给对象的属性值
@@ -43,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
          */
         ValueAnimator valueAnimator = ValueAnimator.ofInt(mButton.getLayoutParams().width, 500);
         //ofInt(a,b);从a，平滑到b。也可以设置多个数值。a-b-c;
-
         valueAnimator.setDuration(2000);
         //运行时长
         valueAnimator.setStartDelay(100);
@@ -52,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         //重复播放次数
         valueAnimator.setRepeatMode(ValueAnimator.RESTART);
         //重复播放的，动画模式。RESTART 正序，REVERSE倒叙
-
         //监听器
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -68,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
         valueAnimator.start();
         //启动动画

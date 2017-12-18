@@ -15,7 +15,7 @@ public class PointEvalutor implements TypeEvaluator {
         Point startPoint = (Point) startValue;
         Point endPoint = (Point) endValue;
         //fraction 完成度。 计算得到当前x,y
-        float x =startPoint.getX() + fraction * (endPoint.getX() - startPoint.getX());
+        float x = startPoint.getX() + fraction * (endPoint.getX() - startPoint.getX());
         float y = startPoint.getY() + fraction * (endPoint.getY() - startPoint.getY());
 
         //计算后的坐标封装到一个新的对象后返回
